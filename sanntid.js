@@ -141,7 +141,7 @@ var app = {
 			direction = (direction ? direction : false),
 			moment = require('moment');
 
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 10; i++) {
 			var visit = data[i];
 
 			if (typeof visit === 'undefined') {
@@ -154,7 +154,7 @@ var app = {
 					timestamp = new Date(timestamp),
 					arrival = timestamp.getHours() + ':' + timestamp.getMinutes();
 
-				if ((timestamp.getMinutes() - now.getMinutes()) < 10) {
+				if ((timestamp.getMinutes() - now.getMinutes()) < 20) {
 					arrival = moment(timestamp).fromNow();
 				}
 
